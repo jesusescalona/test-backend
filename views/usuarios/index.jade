@@ -1,0 +1,37 @@
+﻿extends ../layout
+block content
+  h1 Usuarios
+  p
+    a(href="/usuarios/create") Crear nuevo usuario
+  -if(usuarios.length > 0)
+    table
+      thead
+        tr
+          th Nombre
+          th Género
+          th Compañía
+          th Email
+          th Teléfono
+          th Dirección
+          th
+          th
+          th
+      tbody
+        -each item in usuarios
+          tr
+            td #{item.name}
+            td #{item.gender}
+            td #{item.company}
+            td #{item.email}
+            td #{item.phone}
+            td #{item.address}
+            td
+             a(href="/usuarios/#{item._id}") Ver Json
+            td 
+              a(href="/usuarios/#{item._id}/edit") Editar
+            td
+              form(method="post", action="/usuarios/#{item._id}")
+                input(type="hidden", name="_method", value="DELETE")
+                a(href="javascript:void(0);", onclick="if(confirm('¿Está seguro que desea eliminar este usuario?')){this.parentNode.submit();}") Eliminar
+  -else
+    p No existen usuarios creados

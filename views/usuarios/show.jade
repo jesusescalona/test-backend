@@ -1,0 +1,23 @@
+﻿extends ../layout
+block content
+  section.flex
+   h1 Datos del Usuario
+   article
+    h3 Nombre:
+    p #{usuario.name}
+   article
+    h3 Género:
+    p #{usuario.gender}
+   article
+    h3 Compañia:
+    p #{usuario.company}
+   article
+    h3 Email:
+    p #{usuario.email}
+   article
+    h3 Teléfono:
+    p #{usuario.phone}
+   article
+    h3 Dirección:
+    p #{usuario.address}
+  a(href="/usuarios") Volver al inicio

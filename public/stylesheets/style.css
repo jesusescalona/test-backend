@@ -1,0 +1,20 @@
+body
+{
+  padding: 50px;font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a
+{
+  color: #00B7FF;
+  text-decoration: none !important;
+}
+table, th, td{border: 1px solid #000 !important;}
+th, td{padding: .5em 1em;}
+
+.flex{display: flex;flex-flow:column;}
+.flex h2,p{display: inline-flex;flex-flow: wrap;}
+.flex article{display: inline-flex;align-items: baseline;}
+.flex article h3,
+.flex article p
+{
+	padding-right: 1em;
+}
